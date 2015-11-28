@@ -1,0 +1,6 @@
+function displayStateTrajectory(t,x,u, obstacles, r)
+    plot(x(1,:),x(2,:),'b.-','MarkerSize',10);
+    viscircles(obstacles, repmat(r,size(obstacle,1));
+    axis([-1,6,-1,6]); axis equal;
+    drawnow;
+end
