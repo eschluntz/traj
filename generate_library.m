@@ -34,7 +34,7 @@ close all;
 % LIBRARY STRUCTURE
 debug = true;
 
-d = 5;
+d = 1:.5:5;
 n_runs = 15;
 runs = 1:n_runs;
 settings = combvec(d,runs);

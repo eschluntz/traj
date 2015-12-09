@@ -1,5 +1,0 @@
-% input: x0,xf
-% output: M, ma
-x0 = [0,0];
-xf = [5,5];
-
