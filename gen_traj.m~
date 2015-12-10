@@ -1,4 +1,4 @@
-function [xtraj, utraj, tf] = gen_traj(x0,xf, obstacles, rs, debug)
+function [xtraj, utraj, tf] = gen_traj(x0,xf, obstacles, rs, debug, guess)
 %gen_traj Generate a trajectory for a given setup.
     
 % system
@@ -50,8 +50,10 @@ function [xtraj, utraj, tf] = gen_traj(x0,xf, obstacles, rs, debug)
     end
     
     [x,u, tf] = guess_init_traj(x0,xf, rho, ulim, N); % returns PPTrajectories
-
-    guess = struct('u',u,'x',x);
+    
+    if guess == {}
+        guess = struct('u',u,'x',x);
+    end
     %prog = setSolverOptions(prog, 'snopt', 'iterationslimit', iters);
     
     [xtraj,utraj,~,tf,~,~] = prog.solveTraj(tf, guess);

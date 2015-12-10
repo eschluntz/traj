@@ -30,17 +30,16 @@ TODO:
 % X = [x, y, vx, vy]';
 clear;
 close all;
-tic
 
 % LIBRARY STRUCTURE
-debug = true;
+debug = false;
 
 % creating library space
 d = 5;
 
 ths = linspace(0,5/3*pi,6);
 vis = 1.5 * [cos(ths); sin(ths)];
-vis = [0;0];% [vis,[0;0]];
+vis = [vis,[0;0]];
 
 n_runs = 23;
 runs = 1:n_runs;
@@ -55,7 +54,7 @@ lib_u = [];
 lib_x{N} = [];
 lib_u{N} = [];
 
-for n = 1:N;
+parfor n = 1:N;
     row = settings(:,n);
     disp(row);
     d = row(2);
@@ -81,8 +80,6 @@ for n = 1:N;
     lib_u{n} = utraj;
 end
 
-opts_x0 = vis;
-toc
-save 'library_demo.mat' lib_d lib_x0 opts_x0 lib_tf lib_x lib_u;
+save 'library_new.mat' lib_d lib_x0 lib_x0 lib_tf lib_x lib_u;
 
 

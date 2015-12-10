@@ -33,11 +33,5 @@ Presentation outline:
 > motivation: what is robocup?
 > motivation: why is this interesting / underactuated?
 > overview of solution: trajectory libraries
-> system
-> training
-    805 trajectories in library
-    generated in 7 minutes (428.4 seconds)
-> selecting
-> results
-> next steps (discretization error, final optimization, local solutions?)
+> 
 %}
