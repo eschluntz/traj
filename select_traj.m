@@ -3,7 +3,7 @@
 
 % inputs
 d = 4;
-[obstacles, rs] = gen_rand_obstacles([0;0],[d;d]);
+[obstacles, rs] = gen_rand_obstacles([0;0],[d;0]);
 clf;
 
 % assume library is already sorted by tf

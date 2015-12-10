@@ -37,7 +37,7 @@ function [ obss, rss ] = gen_all_obstacles(x0, xf)
     
     % left / right
     for offset_x = [-dist/4, dist/4]
-        for rad = [dist/8, dist/5] - .1
+        for rad = [dist/6, dist/4] - .1
             for offset_y = [rad/2, -rad/2]
                 obss{i} = [center + [offset_x, 0]; center + [offset_x, offset_y]];
                 rss{i} = [rad;rad];
