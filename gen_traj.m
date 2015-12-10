@@ -25,7 +25,9 @@ function [xtraj, utraj, tf] = gen_traj(x0,xf, obstacles, rs, debug)
     prog = DircolTrajectoryOptimization(plant,N,[0.1 10]);
     prog = addStateConstraint(prog,ConstantConstraint(x0),1);
     prog = addStateConstraint(prog,ConstantConstraint(xf),N);
+    prog = addInputConstraint(prog,QuadraticConstraint(0, 1, 2*eye(2), zeros(2, 1)), 1:N);
 
+    
     % add obstacles
     Q = 2*diag([1,1,0,0]); % only count x and y
     for i = 1:size(obstacles,1)

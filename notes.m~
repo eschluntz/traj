@@ -1,0 +1,14 @@
+%{
+Notes for Trajectory Library project
+
+Goals:
+< > realtime path planning including dynamics and obstacles
+< > compute time < 50ms
+< > paths within 80% of optimal
+
+Flow:
+1. [offline] Generate library of trajectories for every...
+        a. distance to target
+        b. initial velocity
+    This assumes fina
+%}

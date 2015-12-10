@@ -46,7 +46,7 @@ lib_u = [];
 lib_x{N} = [];
 lib_u{N} = [];
 
-for n = 1:N;
+parfor n = 1:N;
     row = settings(:,n);
     d = row(1);
     j = row(2);

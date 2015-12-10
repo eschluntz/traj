@@ -1,8 +1,12 @@
 % selects a trajectory from the library
 % inputs: all library vars. d, obstacles, rs
 
-% assume library is already sorted by tf
+% inputs
+d = 4;
+[obstacles, rs] = gen_obstacles([0;0],[d;d]);
+clf;
 
+% assume library is already sorted by tf
 indices = (lib_d == d);
 traj_xs = lib_x(indices);
 traj_us = lib_u(indices);
@@ -11,7 +15,6 @@ n = size(lib_x,2);
 best_x = [];
 best_u = [];
 
-figure;
 hold on;
 for i = 1:n
     if check_traj(traj_xs{i}, obstacles, rs)
