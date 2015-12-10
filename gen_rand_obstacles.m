@@ -1,5 +1,5 @@
-function [ obs, rs ] = gen_obstacles(x0, xf)
-%gen_obstacles Summary of this function goes here
+function [ obs, rs ] = gen_rand_obstacles(x0, xf)
+%gen_rand_obstacles Summary of this function goes here
     x0 = x0(1:2);
     xf = xf(1:2);
     d = abs(x0(1) - xf(1));

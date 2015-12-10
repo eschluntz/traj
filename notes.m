@@ -17,9 +17,14 @@ Flow:
 4. [Online] perform few steps of optimization
 
 TODO:
-< > add circular force constraint
-< > better collection of trajectories to use
-< > build library for more init condits
+<X> add circular force constraint
+< > better collection of obstacles to use
+    > none, 
+    > center (small, med, large, full) * (up, down)
+    > (left, right) * (small, med)
+    > snake * (up, down)
+    This is 15 total, should be decent
+< > build library for velocity init condits
 < > metrics for testing
 < > presentation
 %}

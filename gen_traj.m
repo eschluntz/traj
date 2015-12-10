@@ -21,7 +21,7 @@ function [xtraj, utraj, tf] = gen_traj(x0,xf, obstacles, rs, debug)
 
     % set up a direct transcription problem with N knot points and bounds on
     % the duration
-    N = 30;
+    N = 20;
     prog = DircolTrajectoryOptimization(plant,N,[0.1 10]);
     prog = addStateConstraint(prog,ConstantConstraint(x0),1);
     prog = addStateConstraint(prog,ConstantConstraint(xf),N);
