@@ -7,8 +7,8 @@ function [ obs, rs ] = gen_rand_obstacles(x0, xf)
     r_min = d/10;
     obn = 3;
     
-    obbox = repmat([d, d],obn,1); % box
-    oboff = repmat([0, -d/2], obn,1); % offset
+    obbox = repmat([d, d/2],obn,1); % box
+    oboff = repmat([0, -d/4], obn,1); % offset
     
     obs = obbox .* rand(obn,2) + oboff;
     rs = (r_max-r_min) * rand(obn,1) + r_min;
